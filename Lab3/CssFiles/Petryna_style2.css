@@ -1,0 +1,34 @@
+div{
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: bold;
+}
+div.text1{
+    margin-left: 60px;
+    border-style: solid;
+    border-color: coral;
+    text-indent: 20px;
+    background-color: cadetblue;
+}
+
+div.text2{
+    margin-left: 120px;
+    border-style: double;
+    border-color: blueviolet;
+    text-indent: 30px;
+    background-color: darkcyan;
+    color: white;
+}
+
+div.text3{
+    margin-left: 180px;
+    border-style: dashed;
+    border-color: brown;
+    text-indent: 40px;
+    background-color: darkgoldenrod;
+    color: rgb(113, 255, 231);
+}
+h1{
+    text-align: center;
+}

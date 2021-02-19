@@ -1,0 +1,71 @@
+h2 { 
+    font-size:16pt; 
+    color:#0033FF; 
+    font-family:Geneva, Arial
+    }
+           
+     h2.curs {
+    font-size:18pt; 
+    font-style:italic; 
+    font-family: "Courier New", Courier, mono;  color:#46dcf9
+    }
+    
+    h2.normal { 
+    font-size:16pt; 
+    font-style:normal;
+    color:#FF0000
+    }
+    
+    #bgmagenta{
+    text-indent:20px;
+    background-color:#1166FF; 
+    color:#FFFF00
+    }
+    
+    #fishka{ 
+    background-color:#CC99FF; 
+    color:#3300FF; 
+    font-family:serif; 
+    font-size:20pt;  font-style:oblique
+    }
+    
+    #bgyellow{ 
+    background-color:#FFFF00; 
+    color:#0000FF; 
+    font-family:Verdana, Arial
+    }
+    
+    div {
+        position: absolute;
+              width: 150px;
+              height: 150px;
+              padding: 20px;
+              border: dashed 3px;
+        font-size:15pt;
+    }
+    
+    div.text {
+        position: absolute;
+        font-family:"serif"; 
+        background-color:#99FFFF; 
+        color:red;
+        font-style:oblique;      
+             top: 600px;
+              width: 850px;
+              height: 150px;
+              padding: 20px;
+              
+        }
+    #first {
+          top: 850px;
+          left: 50px;
+          background: #ccf0ff;
+          border-color: #0cf;
+        }
+    #second {
+          top: 950px;
+          left: 150px;
+          background: #fff0cc;
+          border-color: #fc0;
+    font-size:10pt;
+        }

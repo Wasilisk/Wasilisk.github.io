@@ -1,0 +1,54 @@
+h2, h4{
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+}
+h4{
+    font-style: italic;
+}
+div.content{
+    position: absolute;
+    left: 20%;
+	padding: 0;
+    height: 100%;
+}
+div.text1{
+    width: 600px;
+    float: left;
+    background-position: center;
+    margin-right: 20px;
+}
+div.text2{
+    width: 400px;
+    float: left;
+    left:630px;
+}
+div.text1, div.text2{
+    top: 100px;
+    height: 120%; 
+    display: inline-block;
+    padding: 10px;
+    border:5px double red;
+    position: inherit;
+    overflow: scroll;
+    background-image: url(../Photo/Petryna_bg_menu.gif);
+	background-repeat: repeat-x;
+	background-color: #FFCC99;
+	overflow: auto;
+}
+P{
+    text-indent: 15px;
+}
+ul {
+    list-style: none;
+}
+ul li:before {
+    content:  "—";
+    position: relative;
+    left:     -5px;
+}
+body{
+    background-image: url(../Photo/Petryna_ramka.gif);
+    background-repeat: repeat-y;
+    overflow: fixed;
+}

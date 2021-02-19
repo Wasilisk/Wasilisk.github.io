@@ -1,0 +1,21 @@
+.Image{
+    text-align: center;
+}
+.Text{
+    display: block; 
+    text-align: center;
+    font-style: normal;
+    font-size: large;
+    font: bold 3em Arial, sans-serif;
+    color: #ffffff;
+    text-shadow: #182535 1px 1px 0, #182535 2px 2px 0, 
+    #182535 3px 3px 0,  #182535 4px 4px 0, 
+    #182535 5px 5px 0;
+}
+body {
+    background: url(../Photo/Petryna_Background.jpg) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ і Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Сучасні Браузери */
+}
