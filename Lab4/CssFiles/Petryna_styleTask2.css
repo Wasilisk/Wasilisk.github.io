@@ -1,0 +1,54 @@
+body{
+    background: url(../Photos/Petryna_2.jfif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.MainDiv{
+    width: 1500px;
+    border: double 3px wheat;
+    margin: auto;
+    padding: 10px;
+}
+
+p{
+    font-weight:bold;
+    font-size: 25px;
+    color: white;
+    text-shadow: 3px 5px 6px black;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 3px 5px 6px black;
+}
+
+.Picture1{
+    display: block;
+    max-width: 30%;
+    max-height: 30%;
+    margin-top: 3%;
+    float: right;
+    padding: 10px;
+}
+
+.Picture2{
+    display: block;
+    max-width: 30%;
+    max-height: 30%;
+    margin: auto;
+    float: none;
+    padding: 10px;
+    border: solid 2px rgb(83, 79, 79);
+}
+
+.Picture3{
+    display: block;
+    max-width: 30%;
+    max-height: 30%;
+    float: left;
+    padding: 10px;
+}

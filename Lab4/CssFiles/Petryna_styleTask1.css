@@ -1,0 +1,50 @@
+body{
+    
+    background: url(../Photos/Petryna_task21.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.Image1{
+    left: 100px;
+    position: absolute;
+}
+
+.Image2{
+    top:50px;
+    right: 100px;
+    position: fixed;
+}
+
+.Image3{
+    left: 700px;
+    position: relative;
+}
+
+.Image4{
+    left: 1000px;
+    position: static;
+    
+}
+
+.Image5{
+    position: inherit;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 3px 5px 6px black;
+}
+
+.ParentClass{
+    position: absolute;
+    left: 650px;
+}
+
+.Image4 h1{
+    position: absolute;
+    left:150px;
+}
