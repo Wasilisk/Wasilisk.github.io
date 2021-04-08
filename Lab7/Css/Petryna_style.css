@@ -1,0 +1,253 @@
+
+@font-face {
+    font-family: Oswald-Bold;
+    src: url(../Fonts/static/Oswald-Bold.ttf); 
+   }
+
+body{
+	background: url(../Photos/Peryna_mainBack.jpg) no-repeat center center fixed;
+    background-size: cover;
+	overflow-x: hidden;
+}
+
+img {
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	width: 350px;
+  }
+
+  p.image:after {
+	content: attr(image) "(Використання функції attr)";   /*функція повертає значення атрибута*/
+  }
+
+.container1,
+.container2,
+.container3
+{   
+	display: flex;
+}
+
+.container1{     
+	justify-content: center;
+}
+
+div.MainTop{
+	background-image: url(../Photos/Petryna_banner.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	width: 1700px;
+	height: 140px;  
+	display: flex;
+	align-items: center;
+
+}
+
+div.ChildrenTop{
+	width: 700px;
+	height: 100px; 
+	margin-left: 25px;
+	background-color: white;
+}
+
+div.ChildrenTop > p{
+	font-family: Oswald-Bold;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 40px;
+	color: rgb(54, 0, 56);
+	margin-top: 20px;
+}
+
+.container2{
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+div.LeftMain{
+	width: 400px;
+	height: 1800px;
+	background: rgb(107,0,125);
+	background: linear-gradient(0deg, rgba(107,0,125,1) 0%, rgba(195,34,191,1) 100%);
+}
+
+div.LeftMain > p{
+	font-family: Oswald-Bold;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+	padding: 10px;
+}
+
+div.RightMain{
+	width: 1300px;
+	height: 1800px;
+	background: rgb(51,45,253);
+    background: linear-gradient(0deg, rgba(51,45,253,1) 0%, rgba(34,193,195,1) 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.TopRight{
+	width: 1200px;
+	height: 150px;
+	background-color: white;
+	margin-top: 30px;
+}
+
+.TopRight > p{
+	font-family: Oswald-Bold;
+    text-align: center;
+    font-size: 20px;
+	margin-top: 50px;
+    color: rgb(0, 0, 0);
+}
+
+.BottomRight{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.BottomRight>div{
+	width: 550px;
+	height: 1400px;
+	margin: 50px;
+	background-color: white;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.BottomRight > div > p{
+	font-family: Oswald-Bold;
+    text-align: center;
+    font-size: 20px;
+	margin-top: 50px;
+    color: rgb(0, 0, 0);
+	padding: 30px;
+	margin-top: 10px;
+}
+
+
+.container3{     
+	justify-content: center;
+}
+
+.container3>div{
+	background-image: url(../Photos/Petryna_bannerBottom.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+	background-size: cover;
+	width: 1700px;
+	height: 150px;  
+}
+
+h2{
+	 font-family: Oswald-Bold;
+    text-align: center;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+	padding: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+	div.ChildrenTop{
+		width: 400px;
+		height: 80px; 
+		
+	}
+
+	div.ChildrenTop > p{
+		font-size: 23px;
+		color: rgb(54, 0, 56);
+		margin-top: 25px;
+	}
+
+	.container2{
+		flex-direction: column;
+	}
+
+	div.LeftMain{
+		width: 945px;
+		height: 1100px;
+		padding: 10px;
+		background: rgb(107,0,125);
+		background: linear-gradient(0deg, rgba(107,0,125,1) 0%, rgba(195,34,191,1) 100%);
+	}
+
+	div.RightMain{
+		width: 1000px;
+		height: 2050px;
+	}
+
+	.BottomRight{
+		flex-direction: column;
+	}
+
+	.TopRight{
+		width: 900px;
+		height: 130px;
+	}
+
+	.TopRight > p{
+		margin-top: 10px;
+	}
+
+	.BottomRight>div{
+		width: 900px;
+		height: 850px;
+	}
+  }
+
+  @media screen and (max-width: 500px) {
+	div.ChildrenTop{
+		width: calc(300px + 100px);     /*Використання calc*/
+		height: 80px; 
+		
+	}
+
+	div.ChildrenTop > p{
+		font-size: 23px;
+		color: rgb(54, 0, 56);
+		margin-top: 25px;
+	}
+
+	.container2{
+		flex-direction: column;
+	}
+
+	div.LeftMain{
+		width: 450px;
+		height:  calc(300px * 5);       /*Використання calc*/
+		padding: 10px;
+		background: rgb(107,0,125);
+		background: linear-gradient(0deg, rgba(107,0,125,1) 0%, rgba(195,34,191,1) 100%);
+	}
+
+	div.RightMain{
+		width: 470px;
+		height: 2450px;
+	}
+
+	.BottomRight{
+		flex-direction: column;
+	}
+
+	.TopRight{
+		width: 460px;
+		height: 220px;
+	}
+
+	.TopRight > p{
+		margin-top: 10px;
+		padding: 10px;
+	}
+
+	.BottomRight>div{
+		width: 460px;
+		height: 1000px;
+	}
+  }

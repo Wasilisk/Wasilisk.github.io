@@ -1,0 +1,48 @@
+@media print {
+	div.ChildrenTop{
+		width: 1000px;
+		height: 80px; 
+		
+	}
+
+	div.ChildrenTop > p{
+		font-size: 23px;
+		color: rgb(54, 0, 56);
+		margin-top: 25px;
+	}
+
+	.container2{
+		flex-direction: column;
+	}
+
+	div.LeftMain{
+		width: 900px;
+		height: 1050px;
+		padding: 10px;
+		background: rgb(107,0,125);
+		background: linear-gradient(0deg, rgba(107,0,125,1) 0%, rgba(195,34,191,1) 100%);
+	}
+
+	div.RightMain{
+		width: 1000px;
+		height: 2400px;
+	}
+
+	.BottomRight{
+		flex-direction: column;
+	}
+
+	.TopRight{
+		width: 900px;
+		height: 150px;
+	}
+
+	.TopRight > p{
+		margin-top: 10px;
+	}
+
+	.BottomRight>div{
+		width: 900px;
+		height: 1000px;
+	}
+  }
