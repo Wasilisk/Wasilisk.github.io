@@ -5,6 +5,7 @@
 
 .body {
     font: "Arial", sans-serif;
+	overflow-x: hidden;
 }
 .header {
     margin: 0 auto;
