@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Завдання 5</title>
+</head>
+<body onload="nextTask()">
+<div class="main_block">
+    <form id="main_form">
+            <h3 id="scoreMessage"></h3>
+            <div class="inputBlock">
+            <label id="multiplyExpression"></label>
+            <input type="text" id="number" placeholder="Результат...">
+            </div>
+            <h3 id="resultMessage"></h3>
+            <input type="button" value="Перевірити" onclick="check()">
+            <input type="button"  value="Наступне завдання" onclick="nextTask()">
+    </form>
+</div>
+
+<script src="./scripts/script.js"></script>
+</body>
+</html>
