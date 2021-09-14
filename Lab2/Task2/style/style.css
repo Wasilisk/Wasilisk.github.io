@@ -1,0 +1,55 @@
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main_block {
+  width: 580px;
+  height: auto;
+  background-color: #f6f8fe;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+textarea {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  resize: none;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  margin: 15px 10px 15px 10px;
+}
+
+button {
+  border: none;
+  color: black;
+  background-color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-bottom: 20px;
+}
+
+#buttonGroup {
+  margin-left: 20px;
+}
+
+.applyButton {
+  margin-left: 20px;
+  margin-right: 20px;
+}
