@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <script language='JavaScript'>
+    var contenent = new Array(6);
+    contenent [0] = "Євразія";
+    contenent [1] = "Африка";
+    contenent [2] = "Північна Америка";
+    contenent [3] = "Південна Америка";
+    contenent [4] = "Антарктида";
+    contenent [5] = "Австралія";
+    var density = new Array (6);
+    density [0] = 99.8;
+    density [1] = 42.12;
+    density [2] = 22.9;
+    density [3] = 21.4;
+    density [4] = 0.000283;
+    density [5] = 3.3;
+    var area = new Array (6);
+    area [0] = 54.76;
+    area [1] = 30.3;
+    area [2] = 24.71;
+    area [3] = 17.84;
+    area [4] = 14.2;
+    area [5] = 7.692;
+    var conten, index;
+    function fun1() {
+      conten = main_form.t_c.value;
+      for(var i = 0; i < contenent.length; i++){
+        if(conten == contenent[i]) {
+          index = i;
+          break;
+        }
+      }
+      main_form.t_d.value = density[index];
+      main_form.t_a.value = area[index];
+    }
+    function fun2() {
+      population = density[index] * area[index];
+      main_form.t_ad.value = population;
+     }
+    </script>
+  </head>
+  <body>
+    <form id="main_form">
+      Введіть назву континенту: <input type="text" id="t_c"><br>
+      <input type="button" value="Густина і площа" onClick="fun1()">
+      <input type="text" size="20" id="t_d">
+      <input type="text" size="20" id="t_a"><br>
+      <input type="button" value="Населення" onClick="fun2()">
+      <input type="text" size="20" id="t_ad"><br>
+    </form>
+  </body>
+</html>

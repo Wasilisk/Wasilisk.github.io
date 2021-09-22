@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script>
+    function fun(){
+    var x, y, result;
+    x = parseInt(main_form.t_x.value);
+    y = parseInt(main_form.t_y.value);
+    if(x > 0 && y > 0) result = 2*x + y;
+    else if(x < 3 && y > 4) result = x*x + 2*y*y;
+    else d = Math.pow(x, 3);
+    main_form.t_result.value = "" + result;
+    }
+    </script>
+  </head>
+  <body>
+    <form id = "main_form">
+    x = <input type="text" id = "t_x" value=""><br>
+    y = <input type="text" id = "t_y" value=""><br>
+    <input type = "button" onClick = "fun();" value = "Розрахувати"><br>
+    Результат = <input type="text" id = "t_result" value="">
+    </form>
+  </body>
+</html>
