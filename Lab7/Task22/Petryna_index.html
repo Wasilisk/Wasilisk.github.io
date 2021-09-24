@@ -1,0 +1,26 @@
+<html lang="ua">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style/style.css">
+    <script type = "text/javascript" src = "../jquery/jquery-3.4.1.min.js"> </script>
+    <script>
+        $(document).ready(function() {
+            $("#textBlock").hover(
+                function() {
+                    $("#textBlock").addClass("hoverStyle");
+                    $("#hiddenText").show();
+                }, function() {
+                    $("#textBlock").removeClass("hoverStyle");
+                    $("#hiddenText").hide();
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+<div id="textBlock">
+    <h2>Наведись на цей блок, щоб дізнатись цікаву інформацію про себе !</h2>
+    <h2 id="hiddenText" hidden>Ти сонечко !</h2>
+</div>
+</body>
+</html>

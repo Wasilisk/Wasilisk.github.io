@@ -1,0 +1,26 @@
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+#textBlock {
+    width: 30%;
+    height: 20%;
+    background-color: #f6f8fe;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.hoverStyle {
+    background: rgb(252,74,26);
+    background: linear-gradient(126deg, rgba(252,74,26,1) 0%, rgba(247,183,51,1) 100%);
+}
+
+h2 {
+    text-align: center;
+}
