@@ -1,0 +1,36 @@
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_block {
+    width: 600px;
+    height: auto;
+    background-color: #f6f8fe;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Image {
+    height: auto;
+    width: 90%;
+    margin: 20px;
+}
+
+#pop {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    padding: 10px;
+    background: #3AB9AE;
+    border-radius: 5px;
+    border: 1px solid #A2ADBC;
+    margin: 0px;
+    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+}
