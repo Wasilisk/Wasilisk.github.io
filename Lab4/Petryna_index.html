@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <title>Лабораторна робота 4</title>
+</head>
+<body>
+<div class="testBlock">
+    <h1>Лабораторна робота 4</h1>
+    <form id="test">
+        <div class="task1">
+            <p>Рекурсія - це:</p>
+            <input type="radio" name="task1" value="1">
+            <label>Функція, яка викликає сама себе</label><br>
+            <input type="radio" name="task1" value="2">
+            <label>Функція, яка повертає результат розрахунку</label><br>
+            <input type="radio" name="task1" value="3">
+            <label>Оператор, що заміняє вкладені цикли</label><br>
+        </div>
+        <div class="task2">
+            <p>Рефакторинг - це:</p>
+            <input type="radio" name="task2" value="1">
+            <label>Послідовність даних та інструкцій, призначена для обчислювального пристрою</label><br>
+            <input type="radio" name="task2" value="2">
+            <label>Самостійний елемент коду програми, який дозволяє задіяти окремі підпрограми</label><br>
+            <input type="radio" name="task2" value="3">
+            <label>Процес внесення змін до програмного коду відповідно до деякого набору правил</label><br>
+        </div>
+        <div class="task3">
+            <p>Виберіть всі фреймворки, які для створення SPA (Single Page Application)</p>
+            <input type="checkbox" name="task3" value="1">
+            <label>Vue</label><br>
+            <input type="checkbox" name="task3" value="2">
+            <label>Node.js</label><br>
+            <input type="checkbox" name="task3" value="3">
+            <label>Laravel</label><br>
+            <input type="checkbox" name="task3" value="4">
+            <label>React</label><br>
+        </div>
+        <div class="task4">
+            <p>Скриптовими мовами програмування є...</p>
+            <input type="checkbox" name="task4" value="1">
+            <label>C++</label><br>
+            <input type="checkbox" name="task4" value="2">
+            <label>JavaScript</label><br>
+            <input type="checkbox" name="task4" value="3">
+            <label>Python</label><br>
+            <input type="checkbox" name="task4" value="4">
+            <label>Java</label><br>
+        </div>
+        <div class="task5">
+            <p>Що виведе наступний код: alert(`Result=${3+5}`)</p>
+            <input type="text" id="task5">
+        </div>
+        <div class="task6">
+            <p>Скільки ітерацій відбудеться в циклі:</p>
+            <p>for(let i = 0; i < 0; i++)</p>
+            <input type="text" id="task6">
+        </div>
+
+        <input type="submit" value="Підтвердити">
+    </form>
+
+    <div class="resultBlock" hidden>
+        <h3 id="resultText"></h3>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
