@@ -1,0 +1,13 @@
+body {
+  height: 100%;
+}
+
+.main_block {
+  width: 50vw;
+  height: auto;
+  background-color: #f6f8fe;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
