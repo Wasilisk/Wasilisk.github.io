@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta char-set=utf8></meta>
+    <title>Завдання 1</title>
+  </head>
+  <body onLoad="clock()">
+    <form name="clock">
+      Час і дата:
+      <input type="text" name="time_and_date" size="16" value=""><br>
+    </form>
+    <script Language="JavaScript">
+    let timeStr, dateStr;
+    function clock() {
+      now = new Date();
+      hours = now.getHours();
+      minutes = now.getMinutes();
+      seconds = now.getSeconds();
+      timeStr = "" + hours;
+      timeStr += ((minutes < 10) ? "/0" : "/") + minutes;
+      timeStr += ((seconds < 10) ? "/0" : "/") + seconds;
+
+      date = now.getDate();
+      month = now.getMonth()+1;
+      year = now.getFullYear();
+      dateStr = "" + year;
+      dateStr += ((month < 10) ? "*0" : "*") + month;
+      dateStr += ((date < 10) ? "*0" : "*") + date;
+      document.clock.time_and_date.value = timeStr + "+" + dateStr;
+      Timer = setTimeout("clock()",1000);
+    }
+    </script>
+  </body>
+</html>

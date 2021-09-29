@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8" />
+    <title>Завдання 2</title>
+    <style>
+        body { display: flex; height: 40vh; }
+        #calculator {
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 8px;
+        }
+        #display, button {
+            width: 60px;
+            padding: 5px;
+            margin: 8px;
+            border-radius: 5px;
+            background: white;
+        }
+        #display {
+            width: 93%;
+            height: 60px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        #culc {
+          width: 96%;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div class="row">
+          <form id="main_form" >
+            <input id="display" type="text" />
+          </form>
+        </div>
+        <div class="row">
+            <button onclick="tap('1')">1</button>
+            <button onclick="tap('2')">2</button>
+            <button onclick="tap('3')">3</button>
+            <button onclick="tap('4')">4</button>
+            <button onclick="tap('5')">5</button>
+        </div>
+        <div class="row">
+            <button onclick="tap('6')">6</button>
+            <button onclick="tap('7')">7</button>
+            <button onclick="tap('8')">8</button>
+            <button onclick="tap('9')">9</button>
+            <button onclick="tap('0')">0</button>
+        </div>
+        <div class="row">
+            <button onclick="tap('+')">+</button>
+            <button onclick="tap('-')">-</button>
+            <button onclick="tap('*')">*</button>
+            <button onclick="tap('/')">/</button>
+            <button onclick="clean()">С</button>
+        </div>
+        <div class="row">
+            <button onclick="calculate()" id="culc">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+        function calculate() {
+            display.value = eval(display.value);
+        }
+        function clean() {
+            display.value = "";
+        }
+        function tap(symbol) {
+            display.value += symbol;
+        }
+    </script>
+</body>

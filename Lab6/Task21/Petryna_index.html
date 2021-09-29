@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Завдання 2.1</title>
+</head>
+<body>
+<script>
+    let s="vasylpetryna2002@gmail.com";
+    let r=/^([a-z0-9]+)(\.[a-z0-9]+)*@([a-z0-9]+)(\.[a-z0-9]+)*$/i;
+    let a=s.match(r);
+
+    for (let i=0;i<a.length;i++)
+    {
+        document.writeln("<hr> a["+i+"] "+a[i]);
+    }
+</script>
+
+</body>
+</html>
