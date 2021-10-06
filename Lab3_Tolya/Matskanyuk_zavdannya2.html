@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <style>
+        body { display: flex; height: 40vh; }
+        #main {
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 8px;
+        }
+        #display, button {
+            width: 60px;
+            padding: 5px;
+            margin: 8px;
+            border-radius: 5px;
+            background: white;
+        }
+        #display {
+            width: 98%;
+            height: 60px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        #clean {
+          width: 48%;
+        }
+        #space {
+          width: 47%;
+        }
+    </style>
+    <script>
+    function fun() {
+      let alphabet = ["а", "б", "в", "г", "ґ", "д", "е", "є", "ж", "з", "и", "і", "ї", "й", "к", "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц", "ш", "щ", "ь", "ю", "я"];
+      res = "";
+      for (let i = 0; i < alphabet.length; i++) {
+        res += `<button onclick="tap('${alphabet[i]}')">${alphabet[i]}</button>`;
+        if (i == 10 || i == 21)
+          res += "<br>";
+      }
+      document.getElementById('main_div').innerHTML = res;
+    }
+    function clean() {
+        display.value = "";
+    }
+    function tap(symbol) {
+        display.value += symbol;
+    }
+    function space() {
+      display.value += " ";
+    }
+    </script>
+    <title>Завдання 2</title>
+  </head>
+  <body onload="fun()">
+    <div id = "main">
+      <div class="row">
+        <form id="main_form" >
+          <input id="display" type="text" />
+        </form>
+      </div>
+      <div id = "main_div"></div>
+      <div class="row">
+        <button onclick="space()" id="space">Пробел</button>
+        <button onclick="clean()" id="clean">Очистити поле</button>
+      </div>
+    </div>
+  </body>
+</html>

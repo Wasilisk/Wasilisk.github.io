@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Завдання 5</title>
+    <style media="screen">
+      body { display: flex; height: 40vh; }
+      #main_div {
+          margin: auto;
+          padding: 20px;
+          background: white;
+          box-shadow: 0 0 8px;
+      }
+      #display, button {
+          width: 350px;
+          padding: 5px;
+          margin: 8px;
+          border-radius: 5px;
+          background: white;
+      }
+      #display {
+          width: 78%;
+          height: 20px;
+          font-size: 16px;
+          border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body onload="next_question()">
+    <div id="main_div">
+      <div class="row">
+        <span id="percentOfCorrect"></span>
+        <span id="quantityOfCorrect"></span>
+      </div>
+      <div class="row">
+        <span id="task"></span>
+        <input id="display" type="text">
+      </div>
+      <div class="row">
+        <h4 id="check"></h4>
+      </div>
+      <div class="row" onclick="check()">
+        <button>Перевірити</button>
+      </div>
+      <div class="row" onclick="next_question()">
+        <button>Наступне завдання</button>
+      </div>
+    </div>
+    <script type="text/javascript">
+      let numberOfTask = 0;
+      let first_num, second_num;
+      let correct_answers = 0;
+      function next_question() {
+        if (numberOfTask == 10) {
+          alert("---Результати---\nПравильних: " + correct_answers + "\nНеправильних: " + (10 - correct_answers));
+          location.href=location.href;
+        }
+        numberOfTask += 1;
+        document.getElementById("display").value = "";
+        document.getElementById("check").innerHTML = "";
+        first_num = generate_rand_value();
+        second_num = generate_rand_value();
+        document.getElementById("task").innerHTML = first_num + " * " + second_num + " = ";
+        document.getElementById("percentOfCorrect").innerHTML = "Загальний рахунок " + parseInt(correct_answers * 100 / 10) + "%";
+        document.getElementById("quantityOfCorrect").innerHTML = "(" + correct_answers + " правильних відповідей з 10)";
+      }
+      function check() {
+        let value = document.getElementById("display").value;
+        // console.log(typeof(first_num));
+        // console.log(first_num);
+        // console.log(typeof(second_num));
+        // console.log(second_num);
+        // console.log(typeof(value));
+        // console.log(value);
+        if (value == (first_num * second_num)) {
+          document.getElementById("check").innerHTML = "Правильно!";
+          correct_answers += 1;
+        }
+        else {
+          document.getElementById("check").innerHTML = "Неправильно!";
+        }
+      }
+      function generate_rand_value() {
+        return parseInt(Math.random() * (10 - 1) + 1);
+      }
+    </script>
+  </body>
+</html>

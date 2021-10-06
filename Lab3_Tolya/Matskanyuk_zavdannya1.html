@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script>
+    function fun() {
+      let len, width, p, s, d;
+      len = parseInt(main_form.len.value);
+      width = parseInt(main_form.width.value);
+      p = 2 * (len + width);
+      s = len * width;
+      d = Math.sqrt(len * len + width * width);
+      document.getElementById("p").innerHTML = p;
+      document.getElementById("s").innerHTML = s;
+      document.getElementById("d").innerHTML = d;
+    }
+    </script>
+    <title>Завдання 1</title>
+  </head>
+  <body>
+    <form id = "main_form">
+    Довжина <input type="text" id = "len" onchange="fun()"><br>
+    Ширина <input type="text" id = "width" onchange="fun()"><br>
+    Периметр <span id="p"></span><br>
+    Площа <span id="s"></span><br>
+    Діагональ <span id="d"></span>
+    </form>
+  </body>
+</html>

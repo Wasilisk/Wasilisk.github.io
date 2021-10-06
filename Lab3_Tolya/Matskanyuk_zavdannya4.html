@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Завдання 4</title>
+    <style media="screen">
+      body { display: flex; height: 40vh; }
+      #main_div {
+          margin: auto;
+          padding: 20px;
+          background: white;
+          box-shadow: 0 0 8px;
+      }
+      button {
+          width: 20px;
+          padding: 5px;
+          margin: 8px;
+          border-radius: 5px;
+          background: white;
+      }
+      img {
+        height: 600px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body onload="show_slide()">
+    <div id="main_div">
+      <div class="row">
+        <div id="slider"></div>
+        <button onclick="left()"><</button>
+        <button onclick="right()">></button>
+      </div>
+    </div>
+    <script type="text/javascript">
+    let img = ["https://images.immediate.co.uk/production/volatile/sites/22/2019/06/Englsih-oak-in-a-field-d2ece6a.png?quality=45&resize=768,574", "https://i.guim.co.uk/img/media/f037d78056c91399503f07a32c220a364681b853/0_138_4288_2572/master/4288.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=60332e292c10d8301e3eb5c177f1d7e3", "https://freerangestock.com/sample/122837/dark-clouds-and-green-field-.jpg", "https://znaj.ua/crops/cfab7c/1200x675/2/0/2021/05/24/YUMzu4l8fqLK0NdXqd1UWS4cDS7D5YnKmNkuWcOT.jpeg"];
+    let index_of_slide;
+    function show_slide() {
+      let res = "";
+      for (let i = 0; i < img.length; i++) {
+        res += `<div class="slide"><img src=${img[i]}></div>`;
+      }
+      document.getElementById("slider").innerHTML = res;
+      index_of_slide = 1;
+      slide(index_of_slide);
+    }
+    function right() {
+      slide(index_of_slide += 1);
+    }
+    function left() {
+      slide(index_of_slide -= 1);
+    }
+    function current(index) {
+      slide(index_of_slide = index);
+    }
+    function slide(index) {
+      let slides = document.getElementsByClassName("slide");
+      if (index > slides.length) {
+          index_of_slide = 1;
+      }
+      if (index < 1) {
+          index_of_slide = slides.length;
+      }
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      slides[index_of_slide-1].style.display = "block";
+    }
+    </script>
+  </body>
+</html>

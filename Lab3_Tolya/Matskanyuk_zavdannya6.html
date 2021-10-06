@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style media="screen">
+      body {
+      font-family: "Segoe UI", sans-serif;
+      font-size: 2rem;
+      padding: 5rem;
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      .todos {
+        cursor: pointer;
+      }
+      .toggler::before {
+        content: "\25B6";
+        display: inline-block;
+        margin-right: 0.5rem;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .toggler.active::before {
+        transform: rotate(90deg);
+      }
+
+      .toggler-target {
+        display: none;
+      }
+
+      .toggler-target.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="todos" id="todos">
+      <li>
+        <div class="toggler">Food</div>
+        <ul class="toggler-target">
+          <li>Meat</li>
+          <li>
+            <div class="toggler">Fruits</div>
+            <ul class="toggler-target">
+              <li>Apple</li>
+              <li>Pineapple</li>
+              <li>Appricot</li>
+              <li>Lemon</li>
+            </ul>
+          </li>
+          <li>
+            <div class="toggler">Vegetables</div>
+            <ul class="toggler-target">
+              <li>Potatoes</li>
+              <li>Beetroot</li>
+              <li>Carrots</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <script type="text/javascript">
+
+    let togglers = document.querySelectorAll(".toggler");
+    togglers.forEach((toggler) => {
+    toggler.addEventListener("click", () => {
+      toggler.classList.toggle("active");
+      toggler.nextElementSibling.classList.toggle("active");
+    });
+    });
+    </script>
+  </body>
+</html>
