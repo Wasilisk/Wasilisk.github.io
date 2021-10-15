@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Завдання 2</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="main_div">
+      <div class="first_line">
+        <h3><span>Мої одногрупники</span></h3>
+      </div>
+      <div class="second_line">
+        <div class="photo" onclick="tabSwitch('desc1', 'VP', 'LVP')">
+          <img src="photos/mate1.jpg" alt="Василь Петрина" id="VP"><label id="LVP">Василь Петрина</label>
+        </div>
+        <div class="photo" onclick="tabSwitch('desc2', 'YH', 'LYH')">
+          <img src="photos/mate2.jpg" alt="Яремій Ганна" id="YH"><label id="LYH">Яремій Ганна</label>
+        </div>
+        <div class="photo" onclick="tabSwitch('desc3', 'VD', 'LVD')">
+          <img src="photos/mate3.jpg" alt="Векерик Денис" id="VD"><label id="LVD">Векерик Денис</label>
+        </div>
+        <div class="photo" onclick="tabSwitch('desc4', 'MO', 'LMO')">
+          <img src="photos/mate4.jpg" alt="Москалик Олександр" id="MO"><label id="LMO">Москалик Олександр</label>
+        </div>
+      </div>
+      <div class="third_line">
+          <div id="desc1" hidden>
+            <p>Дата народження: 16 березня 2003 року</p>
+            <p>Junior React Developer</p>
+          </div>
+          <div id="desc2" hidden>
+            <p>Дата народження: 7 квітня 2003 року</p>
+            <p>Junior Java Developer</p>
+          </div>
+          <div id="desc3" hidden>
+            <p>Дата народження: 23 вересня 2003 року</p>
+            <p>Junior Python Developer</p>
+          </div>
+          <div id="desc4" hidden>
+            <p>Дата народження: 15 липня 2003 року</p>
+            <p>Junior PHP Developer</p>
+          </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function tabSwitch(new_tab, image, title) {
+        document.getElementById('desc1').style.display = 'none';
+        document.getElementById('desc2').style.display = 'none';
+        document.getElementById('desc3').style.display = 'none';
+        document.getElementById('desc4').style.display = 'none';
+        document.getElementById(new_tab).style.display = 'block';
+
+        document.getElementById('VP').style.width = '60%';
+        document.getElementById('YH').style.width = '60%';
+        document.getElementById('VD').style.width = '60%';
+        document.getElementById('MO').style.width = '60%';
+        document.getElementById(image).style.width = '80%';
+
+        document.getElementById('LVP').style.color = '#e30086';
+        document.getElementById('LYH').style.color = '#e30086';
+        document.getElementById('LVD').style.color = '#e30086';
+        document.getElementById('LMO').style.color = '#e30086';
+        document.getElementById(title).style.color = '#e70014';
+      }
+    </script>
+  </body>
+</html>
