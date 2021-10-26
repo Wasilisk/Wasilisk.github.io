@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Завдання 1</title>
+</head>
+<body>
+<div class="main_block">
+    <p>- .html()</p>
+    <div class="styleBlock" id="buttonGroup">
+        <button onclick="addButton()">Створити нову кнопку</button>
+    </div>
+    <p>- .css()</p>
+    <div class="styleBlock">
+        <p id="textLabel">Привіт світ !</p>
+        <button onclick="editColor()">Змінити колір тексту</button>
+    </div>
+    <p>- .val()</p>
+    <div class="styleBlock">
+        <input type="text" id="textInput">
+        <button onclick="getValue()">Отримати значення поля</button>
+    </div>
+    <p>- .attr(), .removeAttr()</p>
+    <div class="styleBlock">
+        <img id="catImage" src="https://mtdata.ru/u22/photoBDCA/20391403917-0/original.jpg"
+             alt="Картинка" height="200" width="auto"/>
+        <button onclick="getImageSrc()">Отримати атрибут "src"</button>
+        <button onclick="editImageHeight()">Змінити атрибут "height"</button>
+        <button onclick="replaceImage()">Змінити атрибути "src" i "alt"</button>
+        <button onclick="editHeight()">Зменшити висоту на 20px</button>
+        <button onclick="deleteImageSrc()">Видалити значення атрибуту "src"</button>
+    </div>
+</div>
+
+<script src="./scripts/script.js"></script>
+</body>
+</html>

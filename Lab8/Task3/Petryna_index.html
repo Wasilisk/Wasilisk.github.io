@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Завдання 3</title>
+</head>
+<body>
+<div class="main_block">
+    <div class="styleBlock">
+        <ul id="mainList">
+            <li>Пункт 1.</li>
+            <li>Пункт 2.
+                <ul>
+                    <li>Підпункт 2.1.</li>
+                    <li>Підпункт 2.2.
+                        <ul>
+                            <li>Підпункт 2.2.1.</li>
+                            <li>Підпункт 2.2.2.</li>
+                        </ul>
+                    </li>
+                    <li>Підпункт 2.3.</li>
+                </ul>
+            </li>
+            <li>Пункт 3.
+                <ul>
+                    <li>Підпункт 3.1.</li>
+                    <li>Підпункт 3.2.</li>
+                </ul>
+            </li>
+            <li>Пункт 4.</li>
+        </ul>
+    </div>
+    <button onclick="getAllChildren()">Вибрати дочірні елементи всього списку</button>
+    <button onclick="getLastElement()">Вибрати останній елемент в таблиці</button>
+    <button onclick="getPrevLastElement()">Вибрати передостанній елемент в таблиці</button>
+    <button onclick="oddElement()">Вибрати всі непарні елементи списку</button>
+    <button onclick="ignoreFirstElement()">Вибрати всі елементи крім першого</button>
+</div>
+<script src="./scripts/script.js"></script>
+</body>
+</html>

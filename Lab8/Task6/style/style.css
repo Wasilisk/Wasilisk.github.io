@@ -1,0 +1,75 @@
+body {
+  height: 100%;
+  background-image: url("https://wallpaperboat.com/wp-content/uploads/2019/10/free-space-background-02.jpg");
+}
+
+.styleBlock {
+  width: 400px;
+  height: 50px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -150px;
+  margin-left: -250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: 100;
+}
+
+button {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#bongoCat {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  z-index: 2;
+  margin: 40px;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.navigation {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.horizontalButton {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#blackHole {
+  position: absolute;
+  left: 44%;
+  top: 20%;
+  height: 500px;
+  width: auto;
+}

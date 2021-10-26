@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="../jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Завдання 4</title>
+</head>
+<body>
+<div class="main_block">
+    <div class="styleBlock">
+        <ul id="mainList">
+            <li>Пункт 1.</li>
+            <li class="modify">Пункт 2.</li>
+            <ul>
+                <li>Підпункт 2.1.</li>
+                <li>Підпункт 2.2.</li>
+                <ul>
+                    <li class="modify">Підпункт 2.2.1.</li>
+                    <li>Підпункт 2.2.2.</li>
+                </ul>
+                <li>Підпункт 2.3.</li>
+            </ul>
+            <li class="modify">Пункт 3.</li>
+            <ul>
+                <li>Підпункт 3.1.</li>
+                <li>Підпункт 3.2.</li>
+            </ul>
+            <li>Пункт 4.</li>
+            <li>Пункт 5.</li>
+            <ul>
+                <li class="modify">Підпункт 5.1.</li>
+                <ul>
+                    <li>Підпункт 5.1.1.</li>
+                    <li class="modify">Підпункт 5.1.2.</li>
+                </ul>
+                <li>Підпункт 5.2.</li>
+            </ul>
+            <li class="modify">Пункт 6.</li>
+        </ul>
+    </div>
+    <button onclick="apllyModify()">Застосувати зміни</button>
+</div>
+<script src="./scripts/script.js"></script>
+</body>
+</html>
