@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Завдання 1, 2.2</title>
+  </head>
+  <style media="screen">
+    body { display: flex; height: 20vh; }
+    #main {
+        margin: auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 8px;
+    }
+  </style>
+  <body>
+    <div id="main">
+      <h3>Завдання 1, 2.2</h3>
+      <div class="inputting">
+        <label><b>Ім'я</b></label><br><input type="text" id="first_name"><span id="check_first_name"></span>
+      </div>
+      <div class="inputting">
+        <label><b>Прізвище</b></label><br><input type="text" id="last_name"><span id="check_last_name"></span>
+      </div>
+      <div class="inputting">
+        <label><b>Логін</b></label><br><input type="text" id="login"><span id="check_login"></span>
+      </div>
+      <div class="inputting">
+        <label><b>Пароль</b></label><br><input type="text" id="password"><span id="check_password"></span>
+      </div>
+      <div class="inputting">
+        <label><b>Поштовий індекс</b></label><br><input type="text" id="post_index"><span id="check_post_index"></span>
+      </div>
+      <div class="inputting">
+        <label><b>Електронна пошта</b></label><br><input type="text" id="email"><span id="check_email"></span>
+      </div><br>
+      <center><div onclick="check_data()"><button type="button" name="button">Підтвердити</button></div></center>
+    </div>
+    <script type="text/javascript">
+      function make_red(x){
+        x.style = "border: 4px solid red; color: red;";
+      }
+      function make_green(x){
+        x.style = "border: 2px solid green;";
+      }
+      function check_data(){
+        let first_name = document.getElementById('first_name');
+        let last_name = document.getElementById('last_name');
+        let regex_name = /([A-ZА-Я])([a-zа-я]+)/;
+        if (first_name.value.match(regex_name)) {
+          make_green(first_name);
+          document.getElementById('check_first_name').innerHTML = '✔';
+        }
+        else {
+          make_red(first_name);
+          document.getElementById('check_first_name').innerHTML = '<br>Ім\'я повинно починатися з великої букви!';
+        }
+        if (last_name.value.match(regex_name)) {
+          make_green(last_name);
+          document.getElementById('check_last_name').innerHTML = '✔';
+        }
+        else {
+          make_red(last_name);
+          document.getElementById('check_last_name').innerHTML = '<br>Прізвище повинно починатися з великої букви!';
+        }
+
+
+        let login = document.getElementById('login');
+        let regex_login = /([A-Z]*)([a-z]+)/;
+        if (login.value.match(regex_login)) {
+          make_green(login);
+          document.getElementById('check_login').innerHTML = '✔';
+        }
+        else {
+          make_red(login);
+          document.getElementById('check_login').innerHTML = '<br>Логін повинен бути тільки на латині!';
+        }
+
+        let password = document.getElementById('password');
+        let regex_password = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+        if (password.value.match(regex_password)) {
+          make_green(password);
+          document.getElementById('check_password').innerHTML = '✔';
+        }
+        else {
+          make_red(password);
+          document.getElementById('check_password').innerHTML = '<br>Пароль повинен містити мінімум 6 символів, з яких мінімум по 1 букві і цифрі';
+        }
+
+        let post_index = document.getElementById('post_index');
+        let regex_post_index = /^[0-9]{5}$/;
+        if (post_index.value.match(regex_post_index)) {
+          make_green(post_index);
+          document.getElementById('check_post_index').innerHTML = '✔';
+        }
+        else {
+          make_red(post_index);
+          document.getElementById('check_post_index').innerHTML = '<br>Поштовий індекс повинен складатися з 5 цифр!';
+        }
+
+        let email = document.getElementById('email');
+        let regex_email = /^([a-z0-9]+)(\.[a-z0-9]+)*@([a-z0-9]+)(\.[a-z0-9]+)+$/i;
+        if (email.value.match(regex_email)) {
+          make_green(email);
+          document.getElementById('check_email').innerHTML = '✔';
+        }
+        else {
+          make_red(email);
+          document.getElementById('check_email').innerHTML = '<br>e-mail повинен містити символ @ та відповідну  структуру!';
+        }
+      }
+    </script>
+  </body>
+</html>

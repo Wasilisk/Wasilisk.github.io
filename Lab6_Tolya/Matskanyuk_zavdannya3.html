@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Завдання 3</title>
+  </head>
+  <style media="screen">
+    body { display: flex; height: 20vh; }
+    #main {
+        margin: auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 8px;
+    }
+  </style>
+  <body>
+    <div id="main">
+      <center>
+      <div class="task">
+        <label>Завдання 3.1</label><br>
+        <input type="text" placeholder="Введіть послідовність чисел" id="value1" size="30"><br>
+        <button type="button" name="button" onclick="do_task1()">Обернути порядок</button><br>
+        <b><span id="task1"></span></b><br><br>
+      </div>
+      <div class="task">
+        <label>Завдання 3.2</label><br>
+        <input type="text" placeholder="Введіть послідовність чисел" id="value2" size="30"><br>
+        <button type="button" name="button" onclick="do_task2()">Видалити нульові значення</button><br>
+        <b><span id="task2"></span></b><br><br>
+      </div>
+      <div class="task">
+        <label>Завдання 3.3</label><br>
+        <input type="text" placeholder="Введіть строку" id="value3" size="30"><br>
+        <button type="button" name="button" onclick="do_task3()">Реверснути рядок</button><br>
+        <b><span id="task3"></span></b><br><br>
+      </div>
+      <div class="task">
+        <label>Завдання 3.4</label><br>
+        <input type="text" placeholder="Введіть строку" id="value4" size="30" value="Я не люблю морозиво"><br>
+        <button type="button" name="button" onclick="do_task4()">Поміняти місцями та поставити коми</button><br>
+        <b><span id="task4"></span></b><br>
+      </div>
+      </center>
+    </div>
+    <script type="text/javascript">
+      function do_task1() {
+        let v = document.getElementById("value1").value;
+        document.getElementById('task1').innerHTML = v.split(" ").reverse().join(" ");
+      }
+      function do_task2() {
+        let v = document.getElementById("value2").value;
+        let array = v.split(' ')
+        for (i = 0; i < array.length; i++) {
+            if (array[i] == 0) {
+              array[i] = '';
+            }
+        }
+        document.getElementById('task2').innerHTML = array.join(' ');
+      }
+      function do_task3() {
+        let v = document.getElementById("value3").value;
+        document.getElementById("task3").innerHTML = v.split("").reverse().join("");
+      }
+      function do_task4() {
+        let v = document.getElementById("value4").value;
+        let array = v.split(' ');
+        array[2] = [array[1], array[1] = array[2]][0];
+        v = array.join(',');
+        document.getElementById("task4").innerHTML = v;
+      }
+    </script>
+  </body>
+</html>
