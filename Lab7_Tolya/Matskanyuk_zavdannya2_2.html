@@ -1,0 +1,45 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD XHTML 1.0 Transitional // EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <style media="screen">
+      body { display: flex; height: 20vh; }
+      #main {
+          margin: auto;
+          padding: 20px;
+          background: white;
+          box-shadow: 0 0 8px;
+      }
+      .stl {
+        background-color: red;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+    <script type = "text/javascript" src = "jquery-3.6.0.min.js"> </script>
+    <script>
+      $(document).ready(function () {
+        $("#block").hover(
+          function() {
+            $("#block").addClass("stl");
+            $("#gj").show();
+          },
+          function() {
+            $("#block").removeClass("stl");
+            $("#gj").hide();
+          }
+        )
+      });
+    </script>
+  </head>
+<body>
+    <div id="main">
+      <center>
+      <div id="block">Демонстраційний текст
+        <br><br>
+        <div id="gj" hidden>Hidden text</div>
+      </div>
+      </center>
+    </div>
+
+  </body>
+</html>

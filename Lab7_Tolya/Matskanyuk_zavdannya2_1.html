@@ -1,0 +1,21 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD XHTML 1.0 Transitional // EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+  <script type = "text/javascript" src = "jquery-3.6.0.min.js"> </script>
+  <script>
+    $(document).ready(function () {
+        $('.button').click(function () {
+            $("p:first").text("DOM first!");
+            $("p:last").text("DOM last!");
+        });
+    });
+  </script>
+  </head>
+<body>
+    <h1> Контент сторінки </h1>
+    <a href = "#" class = "button"> Натисніть, щоб показати текст </a>
+    <p></p>
+    <p>Демонстраційний текст</p>
+    <p></p>
+  </body>
+</html>

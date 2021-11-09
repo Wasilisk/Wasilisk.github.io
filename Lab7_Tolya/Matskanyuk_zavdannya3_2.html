@@ -1,0 +1,34 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD XHTML 1.0 Transitional // EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <style media="screen">
+      body { display: flex; height: 20vh; }
+      #main {
+          margin: auto;
+          padding: 20px;
+          background: white;
+          box-shadow: 0 0 8px;
+      }
+    </style>
+    <script type = "text/javascript" src = "jquery-3.6.0.min.js"> </script>
+    <script>
+      $(document).ready(function () {
+        $('#click1').bind("click", function () {
+          alert("Одинарний клік");
+        });
+        $('#click2').bind("dblclick", function () {
+          alert("Подвійний клік");
+        });
+      });
+    </script>
+  </head>
+<body>
+    <div id="main">
+      <center>
+        <input type="button" value="Один раз" id="click1">
+        <input type="button" value="Два рази" id="click2">
+      </center>
+    </div>
+
+  </body>
+</html>

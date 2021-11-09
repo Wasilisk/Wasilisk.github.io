@@ -1,0 +1,45 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD XHTML 1.0 Transitional // EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <style media="screen">
+      body { display: flex; height: 20vh; }
+      #main {
+          margin: auto;
+          padding: 20px;
+          background: white;
+          box-shadow: 0 0 8px;
+      }
+      #photo {
+        width: 800px;
+        height: auto;
+      }
+    </style>
+    <script type = "text/javascript" src = "jquery-3.6.0.min.js"> </script>
+    <script>
+      $(document).ready(function () {
+        $('#show_photo').bind("click", function () {
+            $("#photo").show();
+        });
+        $('#photo').bind("click", function () {
+            $("#photo").hide();
+        });
+        $('#photo').bind("mouseover", function () {
+            $("#undertext").show();
+        });
+        $('#photo').bind("mouseout", function () {
+            $("#undertext").hide();
+        });
+      });
+    </script>
+  </head>
+<body>
+    <div id="main">
+      <center>
+        <input type="button" value="Показати фото" id="show_photo"><br><br>
+        <img id="photo" src="https://prousa.info/images/symbols/oak/oak_tree.webp" hidden>
+        <h1 id="undertext" hidden>Дерево</h1>
+      </center>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<! DOCTYPE html PUBLIC "- // W3C // DTD XHTML 1.0 Transitional // EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<script type = "text/javascript" src = "jquery-3.6.0.min.js"> </script>
+<script>
+  $(document).ready(function () {
+      var $text = $('#hide_text');
+      $text.hide();
+      $('.button').click(function () {
+          $text.show(200);
+      });
+  });
+</script>
+</head>
+<body>
+<h1> Контент сторінки </h1>
+<a href = "#" class = "button"> Натисніть, щоб показати текст </a>
+<div id = "hide_text"> Демонстраційний прихований текст </div>
+</body>
+</html>
