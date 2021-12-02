@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Завдання 3</title>
+  </head>
+  <style media="screen">
+    body { display: flex; height: 20vh; }
+    #main {
+        margin: auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 8px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .divs {
+      padding: 5px 30px 5px 30px;
+      border: 1px solid black;
+      box-shadow: 0 0 8px;
+    }
+  </style>
+  <script type = "text/javascript" src = "jquery-3.6.0.min.js"> </script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#end_task").click(function() {
+        $("p").filter(".pp").append("<b>!</b>").end().append("<b>?</b>");
+      });
+      $("#nextUntil_task").click(function() {
+        $("#test").nextUntil("span.ppp").html("nextUntil works!!!");
+      });
+      $("#slice_task").click(function(){
+        $("h4").slice(1, 4).css("color", "red");
+      });
+      $("#first_task").click(function(){
+        $("h3").first().css({fontSize: "30px", color: "red"});
+      });
+      $("#parent_task").click(function(){
+        $("b.par").parent().html("Текст було замінено<br><br>");
+      });
+    });
+  </script>
+  <body>
+    <div id="main">
+      <div class="divs">
+        <center><p class="pp">Hello, World</p>
+        <p class="pp">Hello, World</p>
+        <p>Hello, World</p>
+        <button type="button" name="button" id="end_task">.end()</button></center>
+      </div><br>
+      <div class="divs">
+        <center><span id="test">Абзац</span><br><br>
+      	<span>Абзац</span><br><br>
+      	<span>Абзац</span><br><br>
+      	<span class="ppp">Абзац</span><br><br>
+        <button type="button" name="button" id="nextUntil_task">.nextUntil()</button></center>
+      </div><br>
+      <div class="divs">
+        <center><h4>Абзац 1</h4>
+        <h4>Абзац 2</h4>
+        <h4>Абзац 3</h4>
+        <h4>Абзац 4</h4>
+        <h4>Абзац 5</h4>
+        <button type="button" name="button" id="slice_task">.slice()</button></center>
+      </div><br>
+      <div class="divs">
+        <center><h3>Текст 1</h3>
+        <h3>Текст 2</h3>
+        <h3>Текст 3</h3>
+        <button type="button" name="button" id="first_task">.first()</button></center>
+      </div><br>
+      <div class="divs">
+        <center><br><b>Жирний текст</b><br><br>
+        <div>
+          <b class="par">Жирний текст</b><br><br>
+          <b class="par">Жирний текст</b><br><br>
+        </div>
+        <b>Жирний текст</b><br><br>
+        <button type="button" name="button" id="parent_task">.parent()</button><center>
+      </div>
+    </div>
+  </body>
+</html>

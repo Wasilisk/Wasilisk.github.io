@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Завдання 7</title>
+  </head>
+  <style media="screen">
+    body { display: flex; height: 20vh; }
+    #main {
+        margin: auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 0 8px;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .divs {
+      border: 1px solid black;
+      box-shadow: 0 0 8px;
+      background-color: black;
+    }
+  </style>
+  <script type = "text/javascript" src = "jquery-3.6.0.min.js"> </script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      counter  = 0;
+      $("#animate_task").click(function(){
+        $( ".divs" ).animate({
+  	      width: "toggle",
+          height: "toggle",
+  	      opacity: "toggle"
+	      }, {
+  	      duration: 1500,
+  	      easing: "linear",
+  	      complete: function(){
+  	        console.log("animate completed");
+            new_photo();
+  	      },
+  	      queue: false,
+          fail: function(){
+            alert('Error');
+          },
+        });
+      });
+      function new_photo(){
+        if($("#KN").attr("src") == "photo7.jpg" && counter % 2 == 0){
+          $("#KN").attr({src: "photo8.jpg"});
+        } else if ($("#KN").attr("src") == "photo8.jpg" && counter % 2 == 0){
+          $("#KN").attr({src: "photo7.jpg"});
+        }
+        counter++;
+      }
+    });
+  </script>
+  <body>
+    <div id="main">
+      <center>
+      <div class="divs">
+        <img src="photo7.jpg" width="780" id="KN" >
+      </div>
+      <p class="status"></p>
+      <button type="button" name="button" id="animate_task">.animate()</button></center>
+    </div>
+  </body>
+</html>
