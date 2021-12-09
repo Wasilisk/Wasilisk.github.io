@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./jquery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <title>Лабораторна робота 8</title>
+</head>
+<body>
+<div class="formBlock">
+    <form id="main-form">
+        <div>
+            <h4>СПІВРОБІТНИКИ</h4>
+            <label for="fullname" class="require-field">ПІБ</label>
+            <input type="text" id="fullname" placeholder="Ваше ПІБ..">
+            <div class="error-message" id="fullname_error" hidden>
+                <p>Кожне слово повинно починатись з великої літери</p>
+            </div>
+        </div>
+        <div class="input-group">
+            <h4>НАДХОДЖЕННЯ</h4>
+            <label for="product_name">Найменування товару</label>
+            <input type="text" id="product_name" placeholder="Назва товару..">
+
+            <label for="product_price">Вартість товару</label>
+            <input type="text" id="product_price" placeholder="Вартість товару..">
+
+            <label for="number_sets">Кількість комплектів</label>
+            <div class="range-block">
+            <input type="range" id="number_sets" value="1" min="1" max="25" oninput="this.nextElementSibling.value = this.value">
+            <output>1</output>
+            </div>
+
+            <label for="receipt_date">Дата надходження</label>
+            <input type="date" id="receipt_date" value="2021-12-09">
+
+            <label for="provider_fullname" class="require-field">ПІБ постачальника</label>
+            <input type="text" id="provider_fullname" placeholder="ПІБ постачальника..">
+            <div class="error-message" id="provider_fullname_error" hidden>
+                <p>Кожне слово повинно починатись з великої літери</p>
+            </div>
+
+            <label for="email" class="require-field">Електронна пошта</label>
+            <input type="text" id="email" placeholder="Електронна пошта..">
+            <div class="error-message" id="email_error" hidden>
+                <p>Введіть коректний email</p>
+                <p>Наприклад: vasylpetryna2002@gmail.com</p>
+            </div>
+
+            <label for="phone_number" class="require-field">Телефон</label>
+            <input type="text" id="phone_number" placeholder="Ваш номер (Наприклад  +380 (66) 598-60-85...">
+            <div class="error-message" id="phone_number_error" hidden>
+                <p>Введіть коректний номер телефону</p>
+                <p>Наприклад: +380 (66) 598-60-85)</p>
+            </div>
+        </div>
+        <div>
+            <h4>ВМІСТ КОМПЛЕКТУ</h4>
+            <input type="checkbox" class="custom-checkbox" id="content1" name="vehicle1" value="Духи">
+            <label for="content1"> Духи</label><br>
+            <input type="checkbox" class="custom-checkbox" id="content2" name="vehicle2" value="Шампунь">
+            <label for="content2"> Шампунь</label><br>
+            <input type="checkbox" class="custom-checkbox" id="content3" name="vehicle3" value="Мило">
+            <label for="content3"> Мило</label><br>
+            <input type="checkbox" class="custom-checkbox" id="content4" name="vehicle3" value="Крем">
+            <label for="content4"> Крем</label><br>
+        </div>
+
+        <div class="button-group">
+            <input type="submit" value="Підтвердити">
+            <button class="reset-button" onclick="resetForm()">Очистити</button>
+        </div>
+    </form>
+</div>
+<table id="main_table" hidden>
+    <tr>
+        <th>ПІБ співробітника</th>
+        <th>Найменування товару</th>
+        <th>Вартість товару</th>
+        <th>К-сть комплектів</th>
+        <th>Дата надходження</th>
+        <th>ПІБ постачальника</th>
+        <th>Електронна пошта</th>
+        <th>Телефон</th>
+        <th></th>
+    </tr>
+</table>
+<script src="./scripts/script.js"></script>
+</body>
+</html>
